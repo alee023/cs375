@@ -52,8 +52,11 @@ int main() {
 	root->right->right->right = new Node( 35 ) ;
 	
 	Node* first = FCA( root, root->left->left->right, root->left->right->right ) ;
-	cout << "FCA( 29, 31 ) is " << first->data ; // should be 11
+	cout << "FCA( 29, 31 ) is " << first->data << endl ; // should be 11
 	
 	Node* second = FCA( root, root->right->left->right, root->left->left ) ;
-	cout << "FCA( 33, 21 ) is " << first->data ; // should be 1
+	cout << "FCA( 33, 21 ) is " << second->data << endl ; // should be 1
+	
+	Node* third = FCA( root, root->right->right->right, root->right->right ) ;
+	cout << "FCA( 35, 24 ) is " << third->data << endl ; // should be 24
 }
