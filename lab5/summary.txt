@@ -1,0 +1,17 @@
+SJF = shortest job first
+FCFS = first come first serve
+
+SUMMARY:
+- Average Wait Time: SJF < FCFS < LJF always
+- Maximum Wait Time: FCFS < SJF < LJF mostly
+- Finishing Time: FCFS < LJF < SJF
+
+TIME COMPLEXITIES:
+
+> SJF and LJF:
+	- First sorts the list of jobs using Collections.sort(), using a modified mergesort taking far less than nlog(n) time
+	- SJF() goes through the list of n size n times. However, the list is sorted so it will be significantly less than n^2 time. Also, the size of the list decreases each repeat in the while loop
+	
+> FCFS: 
+	- Collections.sort(): < nlog(n) time
+	- only one traversal of the job list: linear time
